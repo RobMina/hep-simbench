@@ -1,0 +1,13 @@
+hep-simbench
+Copyright 2026 the Mu2e Genesis team (Mu2e Collaboration)
+
+Licensed under the Apache License, Version 2.0 (LICENSE).
+
+The scorer (hepsimbench.score), the ROOT histogram converter, the Codabench bundle builder, the warm-rate timer
+(hepsimbench.bench), the approximation registry (hepsimbench.approximations) and the robust statistics
+(hepsimbench.stats), with their tests, were extracted from mu2e-fastsim (commit 929a28df) and
+made experiment-neutral: the Mu2e task table, the Mu2e calorimeter ntuple converters and the per-workflow GPU launch
+settings stay in mu2e-fastsim, which plugs the latter in through hepsimbench.bench.Extension. The synthetic
+example was rewritten without experiment content.
+
+No experiment-internal inputs, reference histograms, data or physics results are part of this repository.

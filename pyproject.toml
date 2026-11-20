@@ -1,0 +1,26 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "hep-simbench"
+version = "0.1.0"
+description = "Validation and benchmarking of a fast simulation against its stock simulation: fast-vs-stock scoring with a reseeded-stock floor in both dtypes, throughput per grid slot, a warm-rate timer, an approximation registry and Codabench bundles"
+readme = "README.md"
+license = {text = "Apache-2.0"}
+requires-python = ">=3.10"
+dependencies = ["numpy"]
+
+[project.optional-dependencies]
+root = ["uproot"]
+yaml = ["pyyaml"]
+test = ["pytest", "scipy"]
+
+[tool.setuptools.packages.find]
+include = ["hepsimbench*"]
+
+[tool.setuptools.package-data]
+hepsimbench = ["README_codabench.md"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

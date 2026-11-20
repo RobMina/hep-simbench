@@ -1,0 +1,29 @@
+{
+  "title": "hep-simbench: validation and benchmarking of a fast simulation against its stock simulation",
+  "upload_type": "software",
+  "version": "0.1.0",
+  "description": "hep-simbench scores a fast simulation against its stock (full) simulation on the same generated events: histogram validity against a reseeded-stock floor, yields with tolerances and a statistical-power rule, an optional classifier score, peak fits, track agreement and portability ratios, in both float32 and float64; plus throughput per grid slot from a warm-rate timer, an approximation registry with provenance records, and Codabench bundles.",
+  "creators": [
+    {
+      "name": "Mina, Rob",
+      "affiliation": "University of Virginia",
+      "orcid": "0000-0003-2241-8566"
+    }
+  ],
+  "license": "Apache-2.0",
+  "keywords": [
+    "fast simulation",
+    "validation",
+    "benchmark",
+    "Codabench",
+    "particle physics"
+  ],
+  "access_right": "open",
+  "related_identifiers": [
+    {
+      "identifier": "https://github.com/RobMina/hep-simbench/tree/v0.1.0",
+      "relation": "isSupplementTo",
+      "scheme": "url"
+    }
+  ]
+}

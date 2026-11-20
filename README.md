@@ -96,3 +96,8 @@ python -m hepsimbench.codabench build                 # synthetic example; --ref
 ## Tests
 
 `python -m pytest` (synthetic data only). CI runs Python 3.10-3.14 and a Codabench dry run.
+
+## Citing
+
+Please cite the release you used: `CITATION.cff` holds the metadata (GitHub's "Cite this repository" renders it), and
+each tagged release is archived on Zenodo with its own DOI.

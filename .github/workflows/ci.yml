@@ -36,3 +36,26 @@ jobs:
         run: |
           python -m hepsimbench.codabench build
           python -m hepsimbench.score build/example/submissions/good build/example/reference --out good.json
+
+  calochallenge-chain:
+    name: CaloChallenge validation chain on toy files
+    runs-on: ubuntu-24.04
+    timeout-minutes: 20
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.12"
+      - name: Install
+        run: python -m pip install -e '.[test]' h5py
+      - name: Toy files, build, score (the null arm and the dtype legs must pass; the narrow toy model must not)
+        run: |
+          python validation/calochallenge/toy.py build/cc-data --showers 8000
+          python validation/calochallenge/build.py build/cc-data build/cc-out
+          python validation/calochallenge/summarize.py build/cc-out --require-checks
+          python - <<'PY'
+          import json
+          r = json.load(open("build/cc-out/record.json"))["arms"]
+          assert r["CaloINN"]["float64"]["n_flagged"] > 0, r["CaloINN"]
+          print("narrow toy model flagged:", r["CaloINN"]["float64"]["n_flagged"])
+          PY

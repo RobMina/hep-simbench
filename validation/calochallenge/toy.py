@@ -23,7 +23,8 @@ ENERGIES = 256.0 * 2.0 ** np.arange(15)
 def write_xml(path: Path) -> None:
     rows = "\n".join(f'    <Layer id="{i}" r_edges="{",".join(str(v) for v in r)}" n_bin_alpha="{na}"/>'
                      for i, r, na in LAYERS)
-    path.write_text(f'<Bins>\n  <Particle name="photon" pid="22">\n{rows}\n  </Particle>\n</Bins>\n')
+    empty = "\n".join(f'    <Layer id="{i}" r_edges="0" n_bin_alpha="1"/>' for i in (4, 5, 6))
+    path.write_text(f'<Bins>\n  <Bin pid="22" etaMin="0" etaMax="130" name="photon">\n{rows}\n{empty}\n  </Bin>\n</Bins>\n')
 
 
 def showers(n: int, seed: int, scale: float = 1.0) -> tuple[np.ndarray, np.ndarray]:

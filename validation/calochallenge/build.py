@@ -40,7 +40,9 @@ SUBMISSIONS = {1: "CaloDiffusion", 4: "CaloINN", 7: "Calo-VQ", 8: "CaloScore", 9
 def read_binning(path: Path) -> list[dict]:
     """Layers of the photon entry: id, r edges [mm], number of alpha bins, voxel slice."""
     root = ET.parse(path).getroot()
-    part = next(p for p in root.iter("Particle") if p.get("name", "").lower().startswith("photon"))
+    # the CaloChallenge file has <Bin pid="22" name="photon"> entries (older layouts used <Particle>)
+    part = next(p for p in list(root.iter("Bin")) + list(root.iter("Particle"))
+                if p.get("name", "").lower().startswith("photon") or p.get("pid") == "22")
     layers, start = [], 0
     for el in part.iter("Layer"):
         r = np.array([float(v) for v in el.get("r_edges").split(",")])

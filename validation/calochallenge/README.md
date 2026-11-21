@@ -17,7 +17,8 @@ Cite the dataset records and the challenge write-up (Rep. Prog. Phys. 88 116201,
 Per shower: E_tot / E_inc and, per layer, the energy fraction, the energy-weighted mean and rms voxel radius, the
 energy-weighted mean x and y for layers with alpha bins, and the occupied-voxel fraction (`build.py`). Each feature
 is histogrammed per incident-energy class (15 energies, 256 MeV to 4.2 TeV) and over all energies, in 40
-equal-probability bins from the floor. The scorer runs in `shape` mode against the floor, with the fixed
+equal-probability bins from the floor, with every edge moved off the values the floor takes (sparsity is
+discrete, and an empty layer's fraction is exactly 0), so float32 rounding cannot move a population across an edge. The scorer runs in `shape` mode against the floor, with the fixed
 classifier on the per-shower feature vectors (`classifier_rows` rows per arm). Throughput is not scored: there
 is no stock Geant4 rate per grid slot for this dataset (`stock_rate_per_slot: null`). The features are computed in
 float32 and in float64. The submitted samples are float32 files, so the two legs test the scorer chain's precision,

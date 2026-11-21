@@ -16,6 +16,7 @@ Per shower and per layer l (the five layers of the binning file): f_l = E_l / E_
 of the voxel radius r, the energy-weighted mean of x = r cos(alpha) and y = r sin(alpha) for layers with more than one
 alpha bin, and the fraction of the layer's voxels with energy. Plus E_tot / E_inc. Histograms per incident-energy
 class (the 15 energies) and over all energies; a layer with no energy enters only its energy and sparsity histograms.
+Edges that fall on a value the floor takes (discrete features) are moved to the midpoint below it.
 Voxel order within a layer is alpha-major (alpha bin outer, r bin inner); the script checks that order against the
 mean radial profile and refuses the inputs if the profile is not falling.
 """
@@ -112,6 +113,19 @@ def energy_classes(einc: np.ndarray, energies: np.ndarray) -> np.ndarray:
     return k
 
 
+def off_values(edges: np.ndarray, x: np.ndarray) -> np.ndarray:
+    """Move every edge that sits on a value the floor takes (a discrete feature: sparsity k/n, an empty layer's 0)
+    to the midpoint below it, so float32 rounding cannot carry a whole population across the edge."""
+    u = np.unique(x)
+    out = []
+    for e in edges:
+        i = int(np.searchsorted(u, e))
+        if i < u.size and abs(u[i] - e) <= 1e-6 * max(abs(e), 1e-12):
+            e = 0.5 * (u[i - 1] + u[i]) if i > 0 else u[i] - 0.5 * (u[1] - u[0] if u.size > 1 else 1.0)
+        out.append(e)
+    return np.unique(np.array(out))
+
+
 def make_edges(feat: dict, cls: np.ndarray, n_cls: int, nbins: int) -> dict:
     """Equal-probability edges per (feature, class) and inclusive, from the floor arm only."""
     edges = {}
@@ -121,7 +135,7 @@ def make_edges(feat: dict, cls: np.ndarray, n_cls: int, nbins: int) -> dict:
             x = x[np.isfinite(x)].astype(np.float64)
             if x.size < 10 * nbins:
                 continue
-            e = np.unique(np.quantile(x, np.linspace(0.001, 0.999, nbins + 1)))
+            e = off_values(np.unique(np.quantile(x, np.linspace(0.001, 0.999, nbins + 1))), x)
             if e.size < 4:
                 continue
             edges[f"{name}@{'all' if c is None else f'E{c:02d}'}"] = e

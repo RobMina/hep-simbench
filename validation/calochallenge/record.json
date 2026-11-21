@@ -1,0 +1,297 @@
+{
+ "criteria_sha256": "d456696add6cd485a5c1e53f40769b4c91b37250b02ba4da184fa64026da05e5",
+ "arms": {
+  "BoloGAN": {
+   "float32": {
+    "validity": 0.26997245179063356,
+    "n_hists": 363,
+    "n_flagged": 265,
+    "cls_score": 0.049459133333333405,
+    "auc": 0.9752704333333333,
+    "floor_cls_score": 1.0
+   },
+   "float64": {
+    "validity": 0.26997245179063356,
+    "n_hists": 363,
+    "n_flagged": 265,
+    "cls_score": 0.049459128888888815,
+    "auc": 0.9752704355555556,
+    "floor_cls_score": 1.0
+   }
+  },
+  "Calo-VQ": {
+   "float32": {
+    "validity": 0.15702479338842978,
+    "n_hists": 363,
+    "n_flagged": 306,
+    "cls_score": 0.0023397744444444424,
+    "auc": 0.9988301127777778,
+    "floor_cls_score": 1.0
+   },
+   "float64": {
+    "validity": 0.15702479338842978,
+    "n_hists": 363,
+    "n_flagged": 306,
+    "cls_score": 0.0023397766666666264,
+    "auc": 0.9988301116666667,
+    "floor_cls_score": 1.0
+   }
+  },
+  "CaloDiffusion": {
+   "float32": {
+    "validity": 0.6694214876033058,
+    "n_hists": 363,
+    "n_flagged": 120,
+    "cls_score": 0.3169162888888888,
+    "auc": 0.8415418555555556,
+    "floor_cls_score": 1.0
+   },
+   "float64": {
+    "validity": 0.6721763085399449,
+    "n_hists": 363,
+    "n_flagged": 119,
+    "cls_score": 0.31691633555555554,
+    "auc": 0.8415418322222222,
+    "floor_cls_score": 1.0
+   }
+  },
+  "CaloFlow_student": {
+   "float32": {
+    "validity": 0.5399449035812672,
+    "n_hists": 363,
+    "n_flagged": 167,
+    "cls_score": 0.6748399022222222,
+    "auc": 0.6625800488888889,
+    "floor_cls_score": 1.0
+   },
+   "float64": {
+    "validity": 0.5399449035812672,
+    "n_hists": 363,
+    "n_flagged": 167,
+    "cls_score": 0.67483988,
+    "auc": 0.66258006,
+    "floor_cls_score": 1.0
+   }
+  },
+  "CaloFlow_teacher": {
+   "float32": {
+    "validity": 0.6363636363636364,
+    "n_hists": 363,
+    "n_flagged": 132,
+    "cls_score": 0.6966166844444444,
+    "auc": 0.6516916577777778,
+    "floor_cls_score": 1.0
+   },
+   "float64": {
+    "validity": 0.6363636363636364,
+    "n_hists": 363,
+    "n_flagged": 132,
+    "cls_score": 0.6966166777777778,
+    "auc": 0.6516916611111111,
+    "floor_cls_score": 1.0
+   }
+  },
+  "CaloForest": {
+   "float32": {
+    "validity": 0.019283746556473802,
+    "n_hists": 363,
+    "n_flagged": 356,
+    "cls_score": 0.028150413333333235,
+    "auc": 0.9859247933333334,
+    "floor_cls_score": 1.0
+   },
+   "float64": {
+    "validity": 0.019283746556473802,
+    "n_hists": 363,
+    "n_flagged": 356,
+    "cls_score": 0.028150397777777725,
+    "auc": 0.9859248011111111,
+    "floor_cls_score": 1.0
+   }
+  },
+  "CaloGraph": {
+   "float32": {
+    "validity": 0.23140495867768596,
+    "n_hists": 363,
+    "n_flagged": 279,
+    "cls_score": 0.6442046488888888,
+    "auc": 0.6778976755555556,
+    "floor_cls_score": 1.0
+   },
+   "float64": {
+    "validity": 0.23140495867768596,
+    "n_hists": 363,
+    "n_flagged": 279,
+    "cls_score": 0.6442047155555555,
+    "auc": 0.6778976422222223,
+    "floor_cls_score": 1.0
+   }
+  },
+  "CaloINN": {
+   "float32": {
+    "validity": 0.699724517906336,
+    "n_hists": 363,
+    "n_flagged": 109,
+    "cls_score": 0.5971658799999999,
+    "auc": 0.70141706,
+    "floor_cls_score": 1.0
+   },
+   "float64": {
+    "validity": 0.699724517906336,
+    "n_hists": 363,
+    "n_flagged": 109,
+    "cls_score": 0.5971659600000001,
+    "auc": 0.70141702,
+    "floor_cls_score": 1.0
+   }
+  },
+  "CaloMan": {
+   "float32": {
+    "validity": 0.1955922865013774,
+    "n_hists": 363,
+    "n_flagged": 292,
+    "cls_score": 0.011830471111111018,
+    "auc": 0.9940847644444445,
+    "floor_cls_score": 1.0
+   },
+   "float64": {
+    "validity": 0.1955922865013774,
+    "n_hists": 363,
+    "n_flagged": 292,
+    "cls_score": 0.011830473333333424,
+    "auc": 0.9940847633333333,
+    "floor_cls_score": 1.0
+   }
+  },
+  "CaloScore": {
+   "float32": {
+    "validity": 0.8016528925619835,
+    "n_hists": 363,
+    "n_flagged": 72,
+    "cls_score": 0.6786653355555556,
+    "auc": 0.6606673322222222,
+    "floor_cls_score": 1.0
+   },
+   "float64": {
+    "validity": 0.8016528925619835,
+    "n_hists": 363,
+    "n_flagged": 72,
+    "cls_score": 0.67866538,
+    "auc": 0.66066731,
+    "floor_cls_score": 1.0
+   }
+  },
+  "CaloScore_distilled": {
+   "float32": {
+    "validity": 0.628099173553719,
+    "n_hists": 363,
+    "n_flagged": 135,
+    "cls_score": 0.6155377488888889,
+    "auc": 0.6922311255555555,
+    "floor_cls_score": 1.0
+   },
+   "float64": {
+    "validity": 0.628099173553719,
+    "n_hists": 363,
+    "n_flagged": 135,
+    "cls_score": 0.6155378422222222,
+    "auc": 0.6922310788888889,
+    "floor_cls_score": 1.0
+   }
+  },
+  "CaloScore_single-shot": {
+   "float32": {
+    "validity": 0.39669421487603307,
+    "n_hists": 363,
+    "n_flagged": 219,
+    "cls_score": 0.46182576222222216,
+    "auc": 0.7690871188888889,
+    "floor_cls_score": 1.0
+   },
+   "float64": {
+    "validity": 0.39669421487603307,
+    "n_hists": 363,
+    "n_flagged": 219,
+    "cls_score": 0.4618257533333334,
+    "auc": 0.7690871233333333,
+    "floor_cls_score": 1.0
+   }
+  },
+  "CaloShower2GAN": {
+   "float32": {
+    "validity": 0.3471074380165289,
+    "n_hists": 363,
+    "n_flagged": 237,
+    "cls_score": 0.0024826911111111016,
+    "auc": 0.9987586544444444,
+    "floor_cls_score": 1.0
+   },
+   "float64": {
+    "validity": 0.3471074380165289,
+    "n_hists": 363,
+    "n_flagged": 237,
+    "cls_score": 0.0024826822222221434,
+    "auc": 0.9987586588888889,
+    "floor_cls_score": 1.0
+   }
+  },
+  "CaloShower3GAN": {
+   "float32": {
+    "validity": 0.3415977961432507,
+    "n_hists": 363,
+    "n_flagged": 239,
+    "cls_score": 0.0021060888888888574,
+    "auc": 0.9989469555555556,
+    "floor_cls_score": 1.0
+   },
+   "float64": {
+    "validity": 0.3415977961432507,
+    "n_hists": 363,
+    "n_flagged": 239,
+    "cls_score": 0.002106077777777715,
+    "auc": 0.9989469611111111,
+    "floor_cls_score": 1.0
+   }
+  },
+  "CaloVAE+INN": {
+   "float32": {
+    "validity": 0.303030303030303,
+    "n_hists": 363,
+    "n_flagged": 253,
+    "cls_score": 0.026364095555555522,
+    "auc": 0.9868179522222222,
+    "floor_cls_score": 1.0
+   },
+   "float64": {
+    "validity": 0.303030303030303,
+    "n_hists": 363,
+    "n_flagged": 253,
+    "cls_score": 0.02636408888888897,
+    "auc": 0.9868179555555555,
+    "floor_cls_score": 1.0
+   }
+  },
+  "geant4_null": {
+   "float32": {
+    "validity": 0.9972451790633609,
+    "n_hists": 363,
+    "n_flagged": 1,
+    "cls_score": 1.0,
+    "auc": 0.4994928922222222,
+    "floor_cls_score": 1.0
+   },
+   "float64": {
+    "validity": 0.9972451790633609,
+    "n_hists": 363,
+    "n_flagged": 1,
+    "cls_score": 1.0,
+    "auc": 0.4994926722222222,
+    "floor_cls_score": 1.0
+   }
+  }
+ },
+ "checks": {
+  "null": true,
+  "dtype_legs": true
+ }
+}

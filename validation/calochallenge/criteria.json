@@ -1,0 +1,11 @@
+{
+  "comment": "Declared before any CaloChallenge file is read. The run record carries this file's sha256.",
+  "bins": 40,
+  "seed": 20261121,
+  "classifier_rows": 60000,
+  "null_arm": "geant4_null",
+  "null_must": {"validity_min": 0.95, "cls_score_min": 0.9},
+  "fast_arms": "descriptive: validity and cls_score per model and dtype, no pass line",
+  "float32_float64": "the two legs of every arm must give validity within 0.02 of each other",
+  "cross_check": "rank correlation of cls_score with the CaloChallenge classifier AUC ranking (arXiv:2410.21611), reported, not a criterion"
+}

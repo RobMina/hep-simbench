@@ -1,5 +1,7 @@
 # hep-simbench
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24418711.svg)](https://doi.org/10.5281/zenodo.24418711)
+
 Validation and benchmarking of a fast simulation against its stock (full) simulation. The question it answers for
 every commit of a fast simulation: *is it still right, and how much faster is it, in both float precisions?*
 
@@ -100,4 +102,5 @@ python -m hepsimbench.codabench build                 # synthetic example; --ref
 ## Citing
 
 Please cite the release you used: `CITATION.cff` holds the metadata (GitHub's "Cite this repository" renders it), and
-each tagged release is archived on Zenodo with its own DOI.
+each tagged release is archived on Zenodo with its own DOI. The concept DOI
+[10.5281/zenodo.24418711](https://doi.org/10.5281/zenodo.24418711) covers every version and resolves to the latest one.

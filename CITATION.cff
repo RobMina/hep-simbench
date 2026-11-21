@@ -4,6 +4,7 @@ type: software
 title: "hep-simbench: validation and benchmarking of a fast simulation against its stock simulation"
 version: "0.1.0"
 date-released: "2026-11-20"
+doi: "10.5281/zenodo.24418711"
 authors:
   - family-names: Mina
     given-names: Rob
